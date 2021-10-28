@@ -6,13 +6,126 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- Panjang -->
     <TextView
+        android:id="@+id/panjang"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:gravity="top"
+        android:text="@string/panjang"
+        android:textAppearance="@style/text_label"
+        android:hint="@string/panjang"
+        app:layout_constraintStart_toStartOf="@+id/editText_lebar"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_panjang"
+        android:layout_width="300dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="6dp"
+        android:textAppearance="@style/editText"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/panjang"
+        android:autofillHints="masukkan_angka"
+        android:inputType="numberDecimal"
+        android:hint="@string/masukkan_angka"
+        android:background="@drawable/rectangle_3"/>
+
+    <!-- Lebar -->
+    <TextView
+        android:id="@+id/lebar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="9dp"
+        android:gravity="top"
+        android:text="@string/lebar"
+        android:hint="@string/lebar"
+        android:textAppearance="@style/text_label"
+        app:layout_constraintStart_toStartOf="@+id/editText_panjang"
+        app:layout_constraintTop_toBottomOf="@+id/editText_panjang" />
+
+    <EditText
+        android:id="@+id/editText_lebar"
+        android:layout_width="300dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="6dp"
+        android:textAppearance="@style/editText"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        app:layout_constraintStart_toStartOf="@+id/lebar"
+        app:layout_constraintTop_toBottomOf="@+id/lebar"
+        android:autofillHints="masukkan_angka"
+        android:hint="@string/masukkan_angka"
+        android:inputType="numberDecimal"
+        android:background="@drawable/rectangle_3"/>
+
+    <!-- Tinggi -->
+    <TextView
+        android:id="@+id/tinggi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="9dp"
+        android:gravity="top"
+        android:text="@string/tinggi"
+        android:hint="@string/tinggi"
+        android:textAppearance="@style/text_label"
+        app:layout_constraintStart_toStartOf="@+id/editText_lebar"
+        app:layout_constraintTop_toBottomOf="@+id/editText_lebar" />
+
+    <EditText
+        android:id="@+id/editText_tinggi"
+        android:layout_width="300dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="6dp"
+        android:textAppearance="@style/editText"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        app:layout_constraintStart_toStartOf="@+id/tinggi"
+        app:layout_constraintTop_toBottomOf="@+id/tinggi"
+        android:inputType="numberDecimal"
+        android:hint="@string/masukkan_angka"
+        android:autofillHints="0"
+        android:background="@drawable/rectangle_3"/>
+
+    <!-- HITUNG -->
+    <Button
+        android:id="@+id/btn_calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rectangle_2"
+        android:text="@string/hitung"
+        android:textAppearance="@style/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_tinggi" />
+
+    <!-- Hasil -->
+
+
+    <TextView
+        android:id="@+id/tv_Hasil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:autofillHints="panjang"
+        android:textAppearance="@style/text_label"
+        android:padding="10dp"
+        android:background="@drawable/rectangle_3"
+        app:layout_constraintEnd_toEndOf="@+id/editText_tinggi"
+        app:layout_constraintStart_toStartOf="@+id/tinggi"
+        app:layout_constraintTop_toBottomOf="@+id/btn_calculate" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
